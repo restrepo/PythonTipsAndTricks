@@ -30,7 +30,7 @@ df.rename_axis({'OLD':'NEW'}, axis = 'columns')
 ```python
     df.rename(index={0:'hello',1:'world'})
 ```
-#### Check duplicates of a DF
+#### Check duplicates of a df
 ```python
 df[df.duplicated()]
 ```
@@ -94,7 +94,7 @@ print(l.merge(r,on='T',how='inner').fillna(0))
    T     W    S
 0  A  10.0  2.0
 ```
-#### Creates DF on flight
+#### Creates df on flight
 ```python
 pd=pd.DataFrame()
 pd.loc[10,'hello']='world'
