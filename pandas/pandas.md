@@ -2,7 +2,9 @@
 
 ### Data-Frames (`df`)
 ##### Drop duplicates:
-<code>df.drop_duplicates(subset=['column_name']).reset_index(drop=True)</code>
+```python
+    df.drop_duplicates(subset=['column_name']).reset_index(drop=True)
+```
 #### False positive in `df.loc[row_index,col_indexer]`
 <code>pd.options.mode.chained_assignment = None  # default='warn'</code>
 #### drop colums
@@ -17,9 +19,9 @@ udea.drop(['dict_doi','match'],axis='columns')
 #### Rename columns of DF
 <code>df.rename_axis({'OLD':'NEW'}, axis = 'columns')</code>
 #### Rename index of DF
-    
+```python
     df.rename(index={0:'hello',1:'world'})
-    
+```
 #### Check duplicates of a DF
 <code>df[df.duplicated()]</code>
 or
@@ -45,7 +47,7 @@ df = DataFrame(randn(10, 2), columns=list('ab'))
 df.query('a > b')
 df[df.a > df.b]  # same result as the previous expression</code>
 #### Merge
-<code>
+```python
 import pandas as pd
 l=pd.DataFrame()
 l=l.append(pd.Series({'T':'A','W':10}),ignore_index=True)
@@ -75,4 +77,4 @@ print(l.merge(r,on='T',how='inner').fillna(0))
 ===============
    T     W    S
 0  A  10.0  2.0
-</code>
+```
