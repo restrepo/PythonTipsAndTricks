@@ -94,3 +94,8 @@ print(l.merge(r,on='T',how='inner').fillna(0))
    T     W    S
 0  A  10.0  2.0
 ```
+#### Creates DF on flight
+```python
+pd=pd.DataFrame()
+pd.loc[10,'hello']='world'
+```
