@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+## Contents
+[editor on GitHub](./README.md)
 
 You can use the [editor on GitHub](https://github.com/restrepo/PythonTipsAndTricks/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
