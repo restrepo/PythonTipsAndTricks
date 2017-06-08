@@ -1,5 +1,7 @@
 ## Contents
-[Series](./pandas/series.md)
+* Pandas
+ 1. [Series](./pandas/series.md)
+ 2. [Data Frame](./pandas/DataFrame.md)
 
 You can use the [editor on GitHub](https://github.com/restrepo/PythonTipsAndTricks/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
