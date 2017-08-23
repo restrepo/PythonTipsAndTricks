@@ -14,6 +14,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 udea.drop(['dict_doi','match'],axis='columns')
 ```
 #### Drop DF entries from a list of indices:
+`mi` is the list of indices
 ```python
 df.drop(df.index[list(mi)]
 ```
