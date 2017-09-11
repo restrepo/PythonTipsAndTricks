@@ -2,7 +2,8 @@
 * Pandas
     - [Series](./pandas/series.md)
     - [Data Frame](./pandas/DataFrame.md)
-    - [Data Frame](./numpy/numpy.md)
+* Scientific Python
+    - [Numpy](./numpy/numpy.md)
 
 You can use the [editor on GitHub](https://github.com/restrepo/PythonTipsAndTricks/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
