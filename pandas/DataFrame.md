@@ -100,3 +100,11 @@ print(l.merge(r,on='T',how='inner').fillna(0))
 pd=pd.DataFrame()
 pd.loc[10,'hello']='world'
 ```
+#### Apply method with condition
+```python
+df=pd.DataFrame({'A':['A',2]}).applymap(lambda x:x-1 if isinstance(x,int) else x)
+print(df)
+   A
+0  A
+1  1
+```
