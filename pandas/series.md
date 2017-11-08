@@ -19,6 +19,11 @@ See also [stackoverflow](http://stackoverflow.com/questions/13331698/how-to-appl
 kk['lvr']=kk['SO'].str.lower().str.strip().map(un.unidecode).combine(\
   kk['SJR_Title'].str.lower().str.strip().map(un.unidecode) , func=lv.ratio)
 ```
+#### Apply method with condition
+```python
+applymap(lambda x: x.encode('unicode_escape').
+                 decode('utf-8') if isinstance(x, str) else x).to_excel('kk.xlsx')
+```
 #### Plot histrogram
 ```python
 ps.value_counts().plot(kind='bar')
