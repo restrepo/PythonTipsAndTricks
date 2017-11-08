@@ -102,9 +102,9 @@ pd.loc[10,'hello']='world'
 ```
 #### Apply method with condition
 ```python
-df=pd.DataFrame({'A':['A',2]}).applymap(lambda x:x-1 if isinstance(x,int) else x)
+df=pd.DataFrame({'A':['a',2]}).applymap(lambda x:x-1 if isinstance(x,int) else x)
 print(df)
    A
-0  A
+0  a
 1  1
 ```
