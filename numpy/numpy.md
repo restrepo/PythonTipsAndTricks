@@ -52,6 +52,7 @@ def Si(x):
     except IndexError:
         Si=Sifloat        
     return Si(x)
+
 >>> Si(1)
 0.9460830703671831
 >>> Si([1,2])
