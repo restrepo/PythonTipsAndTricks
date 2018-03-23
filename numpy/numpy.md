@@ -33,6 +33,7 @@ Levenshtein.ratio(s1,s2) # > 0.6</code>
  In[3]: list(itertools.combinations(a, 2))
 Out[3]: [(0, 1), (0, 2), (1, 2)]
 </code>
+
 ### Conver a function which accepts only float function into a function which accepts numpy arrays.
 ```python
 Sifloat=lambda t: integrate.quad(lambda x:sp.sin(x)/x,0,t)[0]
