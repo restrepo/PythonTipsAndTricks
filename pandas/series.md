@@ -23,7 +23,7 @@ s=' '.join(ext.UDEA_título.str.lower().str.replace(' ',':: ').str.split('::').s
 ```
 #### map  upon series with a parameter
 ```python
-ps.map(lambda x: lv.ratio(x,parameter))</code>
+ps.map(lambda x: lv.ratio(x,parameter))
 ```
 #### How to apply a function to two columns of Pandas dataframe
 See also [stackoverflow](http://stackoverflow.com/questions/13331698/how-to-apply-a-function-to-two-columns-of-pandas-dataframe)
