@@ -37,7 +37,7 @@ ps.value_counts().plot(kind='bar')
 ```
 
 ### Calculates the maximum between columns
-See [here](https://stackoverflow.com/a/20033232)
+See [stackoverflow](https://stackoverflow.com/a/20033232)
 ```python
 frame[['test1','test2','test3']].max(axis=1)
 ```
