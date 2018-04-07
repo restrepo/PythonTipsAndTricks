@@ -35,7 +35,7 @@ kk['lvr']=kk['SO'].str.lower().str.strip().map(un.unidecode).combine(\
 ```python
 ps.value_counts().plot(kind='bar')
 ```
-<img src='year.png'>
+
 ### Calculates the maximum between columns
 See [here](https://stackoverflow.com/a/20033232)
 ```python
