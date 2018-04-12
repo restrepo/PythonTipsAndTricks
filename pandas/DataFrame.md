@@ -1,6 +1,12 @@
 ## Pandas
 
 ### Data-Frames (`df`)
+
+##### Show specific file
+```python
+    df.loc[[223,415]]
+```
+
 ##### Drop duplicates:
 ```python
     df.drop_duplicates(subset=['column_name']).reset_index(drop=True)
