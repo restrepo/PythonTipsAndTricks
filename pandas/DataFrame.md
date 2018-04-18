@@ -2,6 +2,13 @@
 
 ### Data-Frames (`df`)
 
+##### Configuration
+```python
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.max_colwidth',200)
+```
+
 ##### Show specific file
 ```python
     df.loc[[223,415]]
