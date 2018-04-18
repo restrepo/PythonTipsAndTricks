@@ -1,6 +1,7 @@
 ## Numpy
 ### Set operations for 1D numeric arrays based on sorting.
-<code>np.lib.arraysetops?
+```python
+np.lib.arraysetops?
 :Contains:
   ediff1d -> The differences between consecutive elements of an array.
   unique,
@@ -10,7 +11,8 @@
   setdiff1d -> Return the sorted, unique values in `ar1` that are not in `ar2`
   in1d -> Test whether each element of a 1-D array is also present in a second array
   union1d -> Return the unique, sorted array of values that are in either of the two
-             input arrays.</code>
+             input arrays.
+```
              
          
 ## Tools and tricks
