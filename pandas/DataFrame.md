@@ -121,3 +121,10 @@ print(df)
 0  a
 1  1
 ```
+
+#### Calculates the maximum between columns
+See [stackoverflow](https://stackoverflow.com/a/20033232)
+```python
+df[['test1','test2','test3']].max(axis=1)
+```
+
