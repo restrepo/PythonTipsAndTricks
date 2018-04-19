@@ -36,8 +36,7 @@ kk['lvr']=kk['SO'].str.lower().str.strip().map(un.unidecode).combine(\
 ps.value_counts().plot(kind='bar')
 ```
 
-### Calculates the maximum between columns
-See [stackoverflow](https://stackoverflow.com/a/20033232)
+#### Convert two series of numbers into a series of the list of numbers
 ```python
-frame[['test1','test2','test3']].max(axis=1)
+ps['col1'].map( lambda x: [x] )+ps['col1'].map( lambda x: [x] )
 ```
