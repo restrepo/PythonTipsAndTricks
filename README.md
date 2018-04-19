@@ -1,6 +1,6 @@
 ## Contents
 * Pandas
-    - [Series](./pandas/series.md)
+    - [Series](./pandas/Series.md)
     - [Data Frame](./pandas/DataFrame.md)
 * Scientific Python
     - [Numpy](./numpy/numpy.md)
