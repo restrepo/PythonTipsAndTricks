@@ -128,3 +128,9 @@ See [stackoverflow](https://stackoverflow.com/a/20033232)
 df[['test1','test2','test3']].max(axis=1)
 ```
 
+#### Write text file with quoted text even for single words
+```python
+import csv
+df.to_csv('vertices_part_2.csv',sep=' ',
+           quoting=csv.QUOTE_NONNUMERIC,header=False,index=False)
+```
