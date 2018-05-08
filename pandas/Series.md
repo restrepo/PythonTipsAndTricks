@@ -40,3 +40,12 @@ ps.value_counts().plot(kind='bar')
 ```python
 ps['col1'].map( lambda x: [x] )+ps['col1'].map( lambda x: [x] )
 ```
+
+#### Convert a list of integers into a list of strings and join them with separator
+```python
+ps['col_list'].map( lambda x: 
+                            '\n'.join(  
+                                list( map(str, x) ) 
+                                  ) 
+                            )
+```
