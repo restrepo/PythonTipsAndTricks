@@ -134,3 +134,28 @@ import csv
 df.to_csv('file.csv',sep=' ',
            quoting=csv.QUOTE_NONNUMERIC,header=False,index=False)
 ```
+#### Write/read full objects 
+Used `hdf` which allow to save several dataframes to the same file:
+```python
+df.to_hdf('file.hdf5','FreeKey')
+```
+
+#### Read pandas data frame with column objects from csv (or excel) file
+When the objects are complex numbers or `numpy arrays`:
+```python
+import pandas as pd
+import numpy as np
+def read_csv_objects(file,columns,**kwargs):
+    '''
+    Read pandas data frame with column objects from csv (or excel) file
+    columns is the column or list of columns which contains the objects,
+    ''' 
+    df=pd.read_csv(file,**kwargs)
+    columns=list(columns)
+    for c in columns:
+        df[c]=df[c].str.replace('\n',',').apply(lambda x: eval(x)  )
+        if df[c].dtype == list:
+            df[c]=df[c].apply(lambda x: np.array(x))
+        
+    return df
+```    
