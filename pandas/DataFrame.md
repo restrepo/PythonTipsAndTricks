@@ -163,5 +163,5 @@ def read_csv_objects(file,columns,**kwargs):
 #### Combine two coluns of text in dataframe
 See also [here](https://stackoverflow.com/a/19378497/2268280)
 ```python
-df['NAME']+' '+df['SURNAME']
+df['FULL NAME']=df['NAME']+' '+df['SURNAME']
 ```
