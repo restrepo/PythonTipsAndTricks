@@ -38,7 +38,7 @@ if df1.shape[0]==df2.shape[0]: # df1.index!=df2.index
 ```
 #### Rename columns of DF
 ```python
-df.rename({'OLD':'NEW'}, axis = 'columns')
+df.rename_axis({'OLD':'NEW'}, axis = 'columns')
 ```
 #### Rename index of DF
 ```python
