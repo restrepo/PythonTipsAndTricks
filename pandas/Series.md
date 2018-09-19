@@ -49,3 +49,7 @@ ps['col_list'].map( lambda x:
                                   ) 
                             )
 ```
+#### Obtain elements by slice
+```python
+ps.iloc[1:7]
+```
