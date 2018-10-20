@@ -165,3 +165,14 @@ See also [here](https://stackoverflow.com/a/19378497/2268280)
 ```python
 df['FULL NAME']=df['NAME']+' '+df['SURNAME']
 ```
+
+### Read line-delimited "JSON-lines" data
+```bash
+$ cat kk.json
+{"A":1,"B":3}
+{"A":5,"B":6}
+```
+Read with the following options:
+```python
+pd.read_json('kk.json',orient='records',lines=True)
+```
