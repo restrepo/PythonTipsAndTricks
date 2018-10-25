@@ -6,7 +6,7 @@
     - [Numpy](./numpy/numpy.md)
     - [Scipy](./scipy/scipy.md)
 * Python
-    _ [Class](./python/Class.md)
+    - [Class](./python/Class.md)
 
 ## Web version
 [here](https://restrepo.github.io/PythonTipsAndTricks/)
