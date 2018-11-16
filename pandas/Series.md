@@ -17,9 +17,12 @@ with type: `float, int,...`
 ```python
 ps.título.str.lower().map(unidecode).str.split('(').str[0]
 ```
+
 #### Series: Obtain the values of a key in a column of dictionaries:
 ```python
-ps.dict_column.apply(lambda x: x.get('key'))```
+ps.dict_column.apply(lambda x: x.get('key'))
+```
+
 #### Select the first two words from a colum text
 ```python
 s=' '.join(ext.UDEA_título.str.lower().str.replace(' ',':: ').str.split('::').str[:2].loc[i])
