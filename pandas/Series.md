@@ -59,3 +59,17 @@ ps['col_list'].map( lambda x:
 ```python
 ps.iloc[1:7]
 ```
+
+#### Fill missing keys from a list with empty string
+```python
+def add_blank_missing_keys(ps,keys):
+    '''
+    Check if the keys are in a Pandas Series.
+    If not the key value is initialized with
+    the empty string
+    '''
+    for k in keys:
+        ps[k]=ps.get(k)
+    #Replace None with empty string
+    return ps.fillna('')    
+```
