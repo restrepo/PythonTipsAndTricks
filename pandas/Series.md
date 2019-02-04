@@ -77,5 +77,5 @@ def add_blank_missing_keys(ps,keys):
 #### Column with list into a single list:
 See: https://stackoverflow.com/a/38896038/2268280
 ```
-df['col'].apply(pd.Series).stack().tolist()
+df['col'].apply(pd.Series).stack().unique()
 ```
