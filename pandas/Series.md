@@ -22,6 +22,11 @@ ps.título.str.lower().map(unidecode).str.split('(').str[0]
 ```python
 ps.dict_column.apply(lambda x: x.get('key'))
 ```
+Before some sanity check need to be done, like
+```python
+(ps[~ps.dict_column.isna()]).dict_column.apply(lambda x: x.get('key'))
+```
+
 
 #### Select the first two words from a colum text
 ```python
