@@ -26,7 +26,10 @@ Before some sanity check need to be done, like
 ```python
 (ps[~ps.dict_column.isna()]).dict_column.apply(lambda x: x.get('key'))
 ```
-
+#### Filter and combain dictionary values from a Series con a list of dictionaries with the same keys.
+```python
+ps.apply(lambda x: [ str( d.get('key1'))+' '+str(d.get('key2')) for d  in x] )
+```
 
 #### Select the first two words from a colum text
 ```python
