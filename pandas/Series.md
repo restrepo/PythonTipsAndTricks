@@ -24,7 +24,7 @@ ps.dict_column.apply(lambda x: x.get('key'))
 ```
 Before some sanity check need to be done.
 Either [replace all `NaN` values in the Series with empty python dict objects](https://stackoverflow.com/a/25901013/2268280)
-```
+```python
 >>> from pandas import isnull
 >>> frame=frame.applymap(lambda x: {} if isnull(x) else x)
 >>> frame
