@@ -26,7 +26,7 @@ Before some sanity check need to be done.
 Either [replace all `NaN` values in the Series with empty python dict objects](https://stackoverflow.com/a/25901013/2268280)
 ```python
 >>> from pandas import isnull
->>> frame=frame.applymap(lambda x: {} if isnull(x) else x)
+>>> ps=sp.ict_column.apply(lambda x: {} if isnull(x) else x)
 >>> frame
                     Q          R
 X           {2: 2010}  {1: 2013}
