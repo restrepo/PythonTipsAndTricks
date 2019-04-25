@@ -171,7 +171,7 @@ See also [here](https://stackoverflow.com/a/19378497/2268280)
 df['FULL NAME']=df['NAME']+' '+df['SURNAME']
 ```
 
-### Read line-delimited "JSON-lines" data
+#### Read line-delimited "JSON-lines" data
 ```bash
 $ cat kk.json
 {"A":1,"B":3}
@@ -180,4 +180,8 @@ $ cat kk.json
 Read with the following options:
 ```python
 pd.read_json('kk.json',orient='records',lines=True)
+```
+#### [Drop rows of a DataFrame based in a specific list of values o some column](https://stackoverflow.com/a/27965386/2268280), e.g `'datecolumn'`
+```python
+df = df[~df.datecolumn.isin(a)]
 ```
