@@ -14,6 +14,11 @@ pd.set_option('display.max_colwidth',200)
     df.loc[[223,415]]
 ```
 
+#### Apply a function to a Dataframe elementwise.
+```python
+df.applymap(func)
+```
+
 ##### Drop duplicates:
 ```python
     df.drop_duplicates(subset=['column_name']).reset_index(drop=True)
