@@ -25,12 +25,11 @@ ps.dict_column.apply(lambda x: x.get('key'))
 Before some sanity check need to be done.
 Either [replace all `NaN` values in the Series with empty python dict objects](https://stackoverflow.com/a/25901013/2268280)
 ```python
->>> from pandas import isnull
->>> ps=sp.ict_column.apply(lambda x: {} if isnull(x) else x)
+>>> ps=df.R(lambda x: {} if pd.isnull(x) else x)
 >>> frame
                     Q          R
-X           {2: 2010}  {1: 2013}
-Y  {2: 2011, 3: 2009}         {}
+0           {2: 2010}  {1: 2013}
+1  {2: 2011, 3: 2009}         {}
 ```
 Or by filter out the `NaN` values
 ```python
