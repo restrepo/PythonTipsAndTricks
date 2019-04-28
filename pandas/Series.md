@@ -96,3 +96,11 @@ See: https://stackoverflow.com/a/38896038/2268280
 ```
 df['col'].apply(pd.Series).stack().unique()
 ```
+
+### Advanced examples
+#### lambda function to combine two columns with conditonal in both columns
+Normalize a column with NaN to string `date` format 'YYYY-MM-DD' from a column with integer `year`:
+```python
+df.date.combine(df.year,func=lambda x,y: y if y>-1 and pd.isnull(x) else x)
+```
+
