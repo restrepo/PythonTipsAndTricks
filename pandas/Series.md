@@ -3,7 +3,11 @@
 ```python
 ps.str.contains(REGEX).str.replace(r'...(REGEX)...',r'...\1...')
 ```
-
+#### `apply` template
+for a list of dictionaries
+```python
+pd.apply( lambda l: [d if d else d for d in x] if l else l)
+```
 #### Change type
 For example for `str` to something else
 
