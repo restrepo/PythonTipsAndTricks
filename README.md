@@ -8,7 +8,7 @@
 * Python
     - [Class](./python/Class.md)
 * Jupyter
-    - [Class](./python/Jupyter.md)    
+    - [Jupyter](./python/Jupyter.md)    
 
 ## Web version
 [here](https://restrepo.github.io/PythonTipsAndTricks/)
