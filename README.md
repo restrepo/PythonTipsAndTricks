@@ -7,6 +7,8 @@
     - [Scipy](./scipy/scipy.md)
 * Python
     - [Class](./python/Class.md)
+* Jupyter
+    - [Class](./python/Jupyter.md)    
 
 ## Web version
 [here](https://restrepo.github.io/PythonTipsAndTricks/)
