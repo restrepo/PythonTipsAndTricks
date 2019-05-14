@@ -1,4 +1,4 @@
-#Jupyter
+# Jupyter
 
 ## Jupyter notebook clear cell output in code
 
