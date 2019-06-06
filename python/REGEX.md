@@ -1,4 +1,4 @@
-## Include Unicode charactes in word
+## Include Unicode characters in word
 ```python
 re.search('\w',s,re.UNIDECODE)
 ```
