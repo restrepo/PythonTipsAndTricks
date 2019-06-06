@@ -3,7 +3,7 @@
 re.search('\w',s,re.UNIDECODE)
 ```
 ## What is the difference between `.*?`  and `.*` regular expressions?
-USe: `.*?`, see: https://stackoverflow.com/a/3075150/2268280
+Use: `.*?`, see: https://stackoverflow.com/a/3075150/2268280
 ## In regex, match either the end of the string or a specific character
 See: https://stackoverflow.com/a/12083343/2268280
 ```python
