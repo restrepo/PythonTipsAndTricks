@@ -185,3 +185,16 @@ pd.read_json('kk.json',orient='records',lines=True)
 ```python
 df = df[~df.datecolumn.isin(a)]
 ```
+
+#### Count elements of a DataFrame `column`,for example: `dptos`
+```python
+df.groupby('dptos')['dptos'].count().sort_values(ascending=False)
+dptos
+Instituto de Física                                             862
+Instituto de Biología                                           656
+Instituto de Química                                            645
+Departamento de Matemáticas                                     130
+```
+
+
+
