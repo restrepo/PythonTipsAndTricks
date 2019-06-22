@@ -196,5 +196,23 @@ Instituto de Química                                            645
 Departamento de Matemáticas                                     130
 ```
 
+#### Use `apply` in multiple columns of a DataFrame
+Based on https://stackoverflow.com/a/16354730
+```python3
+def my_test2(row):
+    return row['a'] % row['c']
+df = DataFrame ({'a' : np.random.randn(6),
+                 'b' : ['foo', 'bar'] * 3,
+                 'c' : np.random.randn(6)})
+
+df['Value'] = df.apply(lambda row: my_test(row['a'], row['c']), axis=1)
+df
+Out[..]:
+                    a    b         c     Value
+          0 -1.674308  foo  0.343801  0.044698
+                       ...
+```
+To apply in all entries use `df.applymap`
+
 
 
