@@ -11,3 +11,9 @@ s1='a;b'
 s2='a'
 re.search('.*?(;|$)',s1)
 ```
+## Replace lowercase letter for uppercase
+```python
+ss=Mcewen
+re.sub( 'Mc(\w)',lambda s: 'Mc'+s.group(1).upper(),ss)
+McWewen
+```
