@@ -214,5 +214,10 @@ Out[..]:
 ```
 To apply in all entries use `df.applymap`
 
+It can be used to merge two columns
+```python
+df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
+```
+
 
 
