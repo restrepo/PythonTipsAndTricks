@@ -219,5 +219,12 @@ It can be used to merge two columns
 df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
 ```
 
+#### Logical filters in DataFrame`
+```python
+#For AND
+df[ ( df['col1']>0 ) & df['col2']<10 ) &    ]
+# For OR use `|`
+```
+
 
 
