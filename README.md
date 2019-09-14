@@ -10,7 +10,7 @@
 * Jupyter
     - [Jupyter](./python/Jupyter.md)
 * Mathplotlib
-    - [Mathplotlib](./mathplotib/mathplotlib.md)
+    - [Mathplotlib](./mathplotlib/mathplotlib.md)
 
 ## Web version
 [here](https://restrepo.github.io/PythonTipsAndTricks/)
