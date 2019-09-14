@@ -8,7 +8,9 @@
 * Python
     - [Class](./python/Class.md)
 * Jupyter
-    - [Jupyter](./python/Jupyter.md)    
+    - [Jupyter](./python/Jupyter.md)
+* Mathplotlib
+    - [Mathplotlib](./mathplotib/mathplotlib.md)
 
 ## Web version
 [here](https://restrepo.github.io/PythonTipsAndTricks/)
