@@ -62,6 +62,14 @@ kk['lvr']=kk['SO'].str.lower().str.strip().map(un.unidecode).combine(\
 ```python
 ps.value_counts().plot(kind='bar')
 ```
+Sorting index
+```python
+ps.value_counts().sort_index().plot(kind='bar')
+```
+or values
+```python
+ps.value_counts().sort_values().plot(kind='bar')
+```
 
 #### Convert two series of numbers into a series of the list of numbers
 ```python
