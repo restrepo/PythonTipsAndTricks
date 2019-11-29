@@ -225,6 +225,9 @@ df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
 df[ ( df['col1']>0 ) & df['col2']<10 ) ]
 # For OR use `|`
 ```
-
-
+#### Replacing NaN with None in Pandas DataFrame or Series
+See: https://stackoverflow.com/a/14163209/2268280
+```python
+df=df.where((pd.notnull(df)), None)
+```
 
