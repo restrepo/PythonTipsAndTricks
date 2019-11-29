@@ -230,4 +230,8 @@ See: https://stackoverflow.com/a/14163209/2268280
 ```python
 df=df.where((pd.notnull(df)), None)
 ```
+#### Convert Data Frame to a list of dictionaries
+```python
+df.to_dict('records')
+```
 
