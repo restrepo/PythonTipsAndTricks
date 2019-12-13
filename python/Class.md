@@ -23,6 +23,45 @@ Discussion about Python `super` https://realpython.com/python-super/ ([Backup][h
 
 `super()` is the same as `super(__class__, <first argument>)`: the first is the subclass, and the second parameter is an object that is an instance of that subclass.
 
+The general structures is like the following illustrated in: [Inherited class variable modification in Python](http://stackoverflow.com/questions/13404476/inherited-class-variable-modification-in-python)
+```python
+class Parent(object):
+    classfoobar='Hello'
+    def __init__(self):
+        self.foobar = ' world'
+
+class Child(Parent):
+    classfoobar = Parent.classfoobar + ' cruel'
+    def __init__(self):
+        super(Child, self).__init__()
+        self.foobar=self.classfoobar+self.foobar
+```
+```python
+>>> Parent.classfoobar
+'Hello'
+>>> P=Parent()
+>>> P.foobar
+' world'
+>>> Child.classfoobar
+'Hello cruel'
+>>> C=Child()
+>>> C.foobar
+'Hello cruel world'
+```
+Furhter details about `super`: [What is the correct way to extend a parent class method in modern Python](http://stackoverflow.com/questions/6070599/what-is-the-correct-way-to-extend-a-parent-class-method-in-modern-python)
+
+Example: add method `has_key('k')` to Python 3 `dict`:
+```python
+class hkdict(dict):
+    def __init__(self,*args, **kwargs):
+        super(hkdict, self).__init__(*args, **kwargs)
+    def has_key(self,k):
+        return k in self        
+#============
+>>> hkdict(python3_dict).has_key('hola mundo')
+```
+In other words, a call to super returns a fake object which delegates attribute lookups to classes above you in the inheritance chain.
+
 Example with `list`. Be sure that `__add__` return the new object
 ```python
 import sys
