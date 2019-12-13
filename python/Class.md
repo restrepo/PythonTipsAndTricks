@@ -17,7 +17,7 @@ class A:
 ```
 
 ## Add new methods to existing Python object
-Discussion about Python `super` https://realpython.com/python-super/ ([Backup][https://web.archive.org/web/20190922043302/https://realpython.com/python-super/] to implement __inheritance__.)
+Discussion about Python `super` https://realpython.com/python-super/ ([Backup](https://web.archive.org/web/20190922043302/https://realpython.com/python-super/) to implement __inheritance__.)
 
 `super()` gives you access to methods in a superclass from the subclass that inherits from it.
 
