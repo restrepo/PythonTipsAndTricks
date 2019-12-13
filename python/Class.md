@@ -2,7 +2,7 @@
 
 ## Special `Class` methods
 See:
-* https://rszalski.github.io/magicmethods/ ([backup](https://web.archive.org/web/20190818113856/https://rszalski.github.io/magicmethods/))
+* https://rszalski.github.io/magicmethods/ ([Backup](https://web.archive.org/web/20190818113856/https://rszalski.github.io/magicmethods/))
  
 Example
 ```python
