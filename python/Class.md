@@ -17,7 +17,12 @@ class A:
 ```
 
 ## Add new methods to existing Python object
-Example with `list`. Be suer that `__add__` return the new object
+Discussion about Python `super` https://realpython.com/python-super/ (Backup)[https://web.archive.org/web/20190922043302/https://realpython.com/python-super/] to implement __inheritance__.
+
+`super()` gives you access to methods in a superclass from the subclass that inherits from it.
+
+`super()` is the same as `super(__class__, <first argument>)`
+Example with `list`. Be sure that `__add__` return the new object
 ```python
 import sys
 class list_of_dictionaries(list):
@@ -26,6 +31,8 @@ class list_of_dictionaries(list):
     '''
     def __add__(self,other):
         return ADD(super(ADD, self).__add__(other))
+        #or
+        #return ADD(super().__add__(other))
     def size(self):
         return len(self)
         
