@@ -45,7 +45,7 @@ class list_of_dictionaries(list):
         x=list(map(f,self))
         return list_of_dictionaries(x)
  ```
- See the vector object construction inhereted from list in [here](http://code.activestate.com/recipes/52272-vector-a-list-based-vector-class-supporting-elemen/) ([Backup]())
+ See the vector object construction inhereted from list in [here](http://code.activestate.com/recipes/52272-vector-a-list-based-vector-class-supporting-elemen/) ([Backup](https://web.archive.org/web/20100719122922/http://code.activestate.com/recipes/52272-vector-a-list-based-vector-class-supporting-elemen/))
 
 ## Enrich dictionary to use `a['b']` as `a.b`
 > The goal is to create a mock class which behaves like a db resultset.
