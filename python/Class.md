@@ -2,7 +2,7 @@
 
 ## Special `Class` methods
 See:
-* https://rszalski.github.io/magicmethods/ [backup](https://web.archive.org/web/20190818113856/https://rszalski.github.io/magicmethods/) 
+* https://rszalski.github.io/magicmethods/ ([backup](https://web.archive.org/web/20190818113856/https://rszalski.github.io/magicmethods/))
  
 Example
 ```python
@@ -17,11 +17,12 @@ class A:
 ```
 
 ## Add new methods to existing Python object
-Discussion about Python `super` https://realpython.com/python-super/ (Backup)[https://web.archive.org/web/20190922043302/https://realpython.com/python-super/] to implement __inheritance__.
+Discussion about Python `super` https://realpython.com/python-super/ ([Backup][https://web.archive.org/web/20190922043302/https://realpython.com/python-super/] to implement __inheritance__.)
 
 `super()` gives you access to methods in a superclass from the subclass that inherits from it.
 
-`super()` is the same as `super(__class__, <first argument>)`
+`super()` is the same as `super(__class__, <first argument>)`: the first is the subclass, and the second parameter is an object that is an instance of that subclass.
+
 Example with `list`. Be sure that `__add__` return the new object
 ```python
 import sys
@@ -44,6 +45,7 @@ class list_of_dictionaries(list):
         x=list(map(f,self))
         return list_of_dictionaries(x)
  ```
+ See the vector object construction inhereted from list in [here](http://code.activestate.com/recipes/52272-vector-a-list-based-vector-class-supporting-elemen/) ([Backup]())
 
 ## Enrich dictionary to use `a['b']` as `a.b`
 > The goal is to create a mock class which behaves like a db resultset.
