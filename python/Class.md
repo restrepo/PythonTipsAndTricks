@@ -17,25 +17,26 @@ class A:
 ```
 
 ## Add new methods to existing Python object
-Example with `list`:
+Example with `list`. Be suer that `__add__` return the new object
 ```python
 import sys
 class list_of_dictionaries(list):
     '''
     Return a dictionary for single results o a list of results
     '''
-    def filter(self,k,v,first=False):
-        if type(self[0])!=dict:
-            sys.exit('NOT A LIST OF DICTIONARIES')
+    def __add__(self,other):
+        return ADD(super(ADD, self).__add__(other))
+    def size(self):
+        return len(self)
         
-        x=[d for d in self if d.get(k)==v]
-        if not x:
-            x=[{}]
-        if first:
-            return x[0]
-        else:
-            return x
-```
+    def apply_filter(self,f):
+        x=list(filter(f,self))
+        return list_of_dictionaries(x)
+
+    def apply(self,f):
+        x=list(map(f,self))
+        return list_of_dictionaries(x)
+ ```
 
 ## Enrich dictionary to use `a['b']` as `a.b`
 > The goal is to create a mock class which behaves like a db resultset.
