@@ -196,9 +196,14 @@ Instituto de Química                                            645
 Departamento de Matemáticas                                     130
 ```
 
-#### Use `apply` in multiple columns of a DataFrame
+#### Use `apply` in multiple columns of a DataFrame with `axis=1`
 Based on https://stackoverflow.com/a/16354730
-```python3
+General help:
+```python
+df.apply(lambda row: row['a'] % row['c'],axis=1)
+```
+Details...
+```python
 def my_test2(row):
     return row['a'] % row['c']
 df = DataFrame ({'a' : np.random.randn(6),
