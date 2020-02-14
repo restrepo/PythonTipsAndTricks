@@ -60,3 +60,6 @@ def Si(x):
 >>> Si([1,2])
 array([ 0.94608307,  1.60541298])
 ```
+
+### Append list of Python dictionaries to a file without loading it
+See [This notebook](./Append_Dictionary_to_File.ipynb)
