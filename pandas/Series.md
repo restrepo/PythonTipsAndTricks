@@ -8,6 +8,21 @@ for a list of dictionaries
 ```python
 pd.apply( lambda l: [d if d else d for d in x] if l else l)
 ```
+* Rebuild a list of dictionaries changing some key
+```python
+def change_key(l):
+    ll=[]
+    for d in l:
+        d['new']=1
+        ll.append(d)
+     return ll
+pd.apply( lambda l: change_key(l) if l else l)
+```
+*  Update a dictionary in a list of dictionaries
+```python
+pd.apply( lambda l: [d.update({'new':1}) for d in x] if l else l)
+```
+
 #### Change type
 For example for `str` to something else
 
