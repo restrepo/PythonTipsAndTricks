@@ -10,3 +10,8 @@ for i in range(10):
     clear_output(wait=True)
     print("Hello World!")
 ```
+# Save jupyter notebook command
+```python
+%%javascript
+IPython.notebook.save_notebook()
+```
