@@ -4,4 +4,5 @@ See
 * https://realpython.com/pandas-groupby/
 * https://colab.research.google.com/github/restrepo/COVID-19/blob/master/covid.ipynb
 ## Example
-`df.groupby(column).sum()`
+1. `df.groupby(column).sum()`
+1. `df.groupby(column).count()`
