@@ -1,5 +1,6 @@
 ## Installation
-Fix the steps from https://jupyterbook.org/intro.html → 
+Fix the steps from https://jupyterbook.org/intro.html 
+
 Install the Python libraries needed to run the code in this particular example:
 
 ```bash
