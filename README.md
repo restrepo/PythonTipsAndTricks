@@ -13,7 +13,7 @@
 * Mathplotlib
     - [Mathplotlib](./mathplotlib/mathplotlib.md)
 * Anaconda
-    - [Anaconda](./python/Anaconda.md)
+    - [Anaconda](./anaconda/Anaconda.md)
 
 
 ## Web version
