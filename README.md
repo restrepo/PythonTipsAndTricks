@@ -9,8 +9,12 @@
     - [Class](./python/Class.md)
 * Jupyter
     - [Jupyter](./python/Jupyter.md)
+    - [Jupyter Book](./python/jupyter-Book.md)
 * Mathplotlib
     - [Mathplotlib](./mathplotlib/mathplotlib.md)
+* Anaconda
+    - [Anaconda](./python/Anaconda.md)
+
 
 ## Web version
 [here](https://restrepo.github.io/PythonTipsAndTricks/)
