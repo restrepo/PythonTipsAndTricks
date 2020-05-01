@@ -4,10 +4,12 @@ Install the Python libraries needed to run the code in this particular example:
 
 ```bash
 conda install numpy matplotlib
+```
 Install the pre-release for Jupyter Book
 
 ```bash
 pip install -U jupyter-book --pre
+```
 Clone the repository containing the source files
 
 ```bash
