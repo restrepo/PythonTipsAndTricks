@@ -9,7 +9,7 @@
     - [Class](./python/Class.md)
 * Jupyter
     - [Jupyter](./python/Jupyter.md)
-    - [Jupyter Book](./python/jupyter-Book.md)
+    - [Jupyter Book](./python/jupyter-book.md)
 * Mathplotlib
     - [Mathplotlib](./mathplotlib/mathplotlib.md)
 * Anaconda
