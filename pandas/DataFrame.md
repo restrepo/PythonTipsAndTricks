@@ -1,7 +1,8 @@
-## Pandas
+# Pandas
 
-### Data-Frames (`df`)
+## Data-Frames (`df`)
 
+### Miscellaneous
 ##### Configuration
 ```python
 pd.set_option('display.max_rows', 500)
@@ -145,41 +146,10 @@ Used `hdf` which allow to save several dataframes to the same file:
 df.to_hdf('file.hdf5','FreeKey')
 ```
 
-#### Read pandas data frame with column objects from csv (or excel) file
-When the objects are complex numbers or `numpy arrays`:
-```python
-import pandas as pd
-import numpy as np
-def read_csv_objects(file,columns,**kwargs):
-    '''
-    Read pandas data frame with column objects from csv (or excel) file
-    columns is the column or list of columns which contains the objects,
-    ''' 
-    df=pd.read_csv(file,**kwargs)
-    columns=list(columns)
-    for c in columns:
-        df[c]=df[c].str.replace('\n',',').apply(lambda x: eval(x)  )
-        if df[c].dtype == list:
-            df[c]=df[c].apply(lambda x: np.array(x))
-        
-    return df
-```    
-
 #### Combine two coluns of text in dataframe
 See also [here](https://stackoverflow.com/a/19378497/2268280)
 ```python
 df['FULL NAME']=df['NAME']+' '+df['SURNAME']
-```
-
-#### Read line-delimited "JSON-lines" data
-```bash
-$ cat kk.json
-{"A":1,"B":3}
-{"A":5,"B":6}
-```
-Read with the following options:
-```python
-pd.read_json('kk.json',orient='records',lines=True)
 ```
 #### [Drop rows of a DataFrame based in a specific list of values o some column](https://stackoverflow.com/a/27965386/2268280), e.g `'datecolumn'`
 ```python
@@ -238,5 +208,54 @@ df=df.where((pd.notnull(df)), None)
 #### Convert Data Frame to a list of dictionaries
 ```python
 df.to_dict('records')
+```
+
+
+
+### Read data
+
+### CSV
+
+#### Read pandas data frame with column objects from csv (or excel) file
+When the objects are complex numbers or `numpy arrays`:
+```python
+import pandas as pd
+import numpy as np
+def read_csv_objects(file,columns,**kwargs):
+    '''
+    Read pandas data frame with column objects from csv (or excel) file
+    columns is the column or list of columns which contains the objects,
+    ''' 
+    df=pd.read_csv(file,**kwargs)
+    columns=list(columns)
+    for c in columns:
+        df[c]=df[c].str.replace('\n',',').apply(lambda x: eval(x)  )
+        if df[c].dtype == list:
+            df[c]=df[c].apply(lambda x: np.array(x))
+        
+    return df
+```    
+
+#### Read a long csv file
+Use `low_memory=Fals`. For example [here](https://www.kaggle.com/diegorestrepo/kernel1f8af0b449)
+```python
+cv=pd.read_csv('/kaggle/input/CORD-19-research-challenge/metadata.csv',low_memory=False)
+```
+
+#### Read line-delimited "JSON-lines" data
+```bash
+$ cat kk.json
+{"A":1,"B":3}
+{"A":5,"B":6}
+```
+Read with the following options:
+```python
+pd.read_json('kk.json',orient='records',lines=True)
+```
+
+#### Read a json dictionary
+Udea `orient='index'`. See for example [here](https://www.kaggle.com/diegorestrepo/kernel1f8af0b449)
+```python
+a=pd.read_json(url, orient='index').T
 ```
 
