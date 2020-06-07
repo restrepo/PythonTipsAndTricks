@@ -258,4 +258,17 @@ Udea `orient='index'`. See for example [here](https://www.kaggle.com/diegorestre
 ```python
 a=pd.read_json(url, orient='index').T
 ```
-
+### Write data
+#### Write to json by using the standard format that can be read also with `json.loads`
+```python
+df.to_json('file.json',orient='records')
+```
+This can be read either as
+```python
+pd.read_json('file.json')
+```
+or
+```python
+with open(r"file.json", "r") as read_file:
+    data = json.load(read_file)
+```
