@@ -1,8 +1,10 @@
 ### Series (`ps`)
+## REGEX
 #### REGEX search and replacement
 ```python
 ps.str.contains(REGEX).str.replace(r'...(REGEX)...',r'...\1...')
 ```
+## `apply` method
 #### `apply` template
 for a list of dictionaries
 ```python
@@ -21,20 +23,6 @@ pd.apply( lambda l: change_key(l) if l else l)
 *  Update a dictionary in a list of dictionaries
 ```python
 pd.apply( lambda l: [d.update({'new':1}) for d in x] if l else l)
-```
-
-#### Change type
-For example for `str` to something else
-
-```python
-ps.str.replace('^$','0').astype(TYPE)
-```
-
-with type: `float, int,...`
-
-#### Series: Obtain first value of a list after `str.split(pattern)`
-```python
-ps.título.str.lower().map(unidecode).str.split('(').str[0]
 ```
 
 #### Series: Obtain the values of a key in a column of dictionaries:
@@ -59,6 +47,44 @@ Or by filter out the `NaN` values
 ps.apply(lambda x: [ str( d.get('key1'))+' '+str(d.get('key2')) for d  in x] )
 ```
 
+#### How to apply a function to two columns of Pandas dataframe
+See also [stackoverflow](http://stackoverflow.com/questions/13331698/how-to-apply-a-function-to-two-columns-of-pandas-dataframe)
+```python
+kk['lvr']=kk['SO'].str.lower().str.strip().map(un.unidecode).combine(\
+  kk['SJR_Title'].str.lower().str.strip().map(un.unidecode) , func=lv.ratio)
+```
+
+#### Flatten column with lists of lists into a single list:
+See: https://stackoverflow.com/a/38896038/2268280
+```
+df['col'].apply(pd.Series).stack().unique()
+```
+
+### Recommended way to update key in a list of dictionaries
+```python
+def func(l):
+    for i in range(len(l)):
+        l[i].get('key')='NEW VALUE'
+     ...
+     return l
+>>> df['col'].apply(func)
+```
+
+## Other
+#### Change type
+For example for `str` to something else
+
+```python
+ps.str.replace('^$','0').astype(TYPE)
+```
+
+with type: `float, int,...`
+
+#### Series: Obtain first value of a list after `str.split(pattern)`
+```python
+ps.título.str.lower().map(unidecode).str.split('(').str[0]
+```
+
 #### Select the first two words from a colum text
 ```python
 s=' '.join(ext.UDEA_título.str.lower().str.replace(' ',':: ').str.split('::').str[:2].loc[i])
@@ -66,12 +92,6 @@ s=' '.join(ext.UDEA_título.str.lower().str.replace(' ',':: ').str.split('::').s
 #### map  upon series with a parameter
 ```python
 ps.map(lambda x: lv.ratio(x,parameter))
-```
-#### How to apply a function to two columns of Pandas dataframe
-See also [stackoverflow](http://stackoverflow.com/questions/13331698/how-to-apply-a-function-to-two-columns-of-pandas-dataframe)
-```python
-kk['lvr']=kk['SO'].str.lower().str.strip().map(un.unidecode).combine(\
-  kk['SJR_Title'].str.lower().str.strip().map(un.unidecode) , func=lv.ratio)
 ```
 #### Plot histrogram
 ```python
@@ -118,11 +138,6 @@ def add_blank_missing_keys(ps,keys):
     return ps.fillna('')    
 ```
 
-#### Flatten column with lists of lists into a single list:
-See: https://stackoverflow.com/a/38896038/2268280
-```
-df['col'].apply(pd.Series).stack().unique()
-```
 
 ### Advanced examples
 #### `lambda` function to combine two columns with conditonal in both columns
