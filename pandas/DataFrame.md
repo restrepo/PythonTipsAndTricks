@@ -166,6 +166,7 @@ Instituto de Química                                            645
 Departamento de Matemáticas                                     130
 ```
 
+## `apply` in row
 #### Use `apply` in multiple columns of a DataFrame with `axis=1`
 Based on https://stackoverflow.com/a/16354730
 General help:
@@ -192,6 +193,15 @@ To apply in all entries use `df.applymap`
 It can be used to merge two columns
 ```python
 df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
+```
+### Recommended way to update key in a list of dictionaries
+```python
+def func(row):
+    for i in range(len(row['col'])):
+        row['col'][i].get('key')='NEW VALUE'
+     ...
+     return row['col']
+>>> df['col'].apply(func,axis='columns')
 ```
 
 #### Logical filters in DataFrame`
