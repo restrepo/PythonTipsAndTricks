@@ -17,3 +17,7 @@ ss=Mcewen
 re.sub( 'Mc(\w)',lambda s: 'Mc'+s.group(1).upper(),ss)
 McWewen
 ```
+## Match start or whitespace
+Also works for end or whitespace:
+
+`\b` is word boundary, which can be a white space, the beginning of a line or a non-alphanumeric symbol
