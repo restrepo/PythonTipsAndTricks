@@ -60,7 +60,7 @@ See: https://stackoverflow.com/a/38896038/2268280
 df['col'].apply(pd.Series).stack().unique()
 ```
 
-### Recommended way to update key in a list of dictionaries
+#### Recommended way to update key in a list of dictionaries
 ```python
 def func(l):
     for i in range(len(l)):
@@ -68,6 +68,12 @@ def func(l):
      ...
      return l
 >>> df['col'].apply(func)
+```
+
+#### Prepare filer for a value of a key for a list of dictionaries
+```python
+df['column'].apply(lambda l: [d.get('key')==value for d in l] 
+       if l else [False]).apply(lambda l: True in l)
 ```
 
 ## Other
