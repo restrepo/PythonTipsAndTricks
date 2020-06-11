@@ -15,6 +15,61 @@ pd.set_option('display.max_colwidth',200)
     df.loc[[223,415]]
 ```
 
+
+## `apply`
+### `apply` in column
+#### `apply` method with condition
+```python
+df=pd.DataFrame({'A':['a',2]}).applymap(lambda x:x-1 if isinstance(x,int) else x)
+print(df)
+   A
+0  a
+1  1
+```
+#### Filter in a column with a list a dictionary by dictionary key
+```python
+df[ df['column'].apply(lambda l: [d.get('key')==value for d in l] 
+       if l else [False]).apply(lambda l: True in l) ]
+```
+### `apply` in row
+#### Use `apply` in multiple columns of a DataFrame with `axis=1`
+Based on https://stackoverflow.com/a/16354730
+General help:
+```python
+df.apply(lambda row: row['a'] % row['c'],axis=1)
+```
+Details...
+```python
+def my_test2(row):
+    return row['a'] % row['c']
+df = DataFrame ({'a' : np.random.randn(6),
+                 'b' : ['foo', 'bar'] * 3,
+                 'c' : np.random.randn(6)})
+
+df['Value'] = df.apply(lambda row: my_test(row['a'], row['c']), axis=1)
+df
+Out[..]:
+                    a    b         c     Value
+          0 -1.674308  foo  0.343801  0.044698
+                       ...
+```
+To apply in all entries use `df.applymap`
+
+It can be used to merge two columns
+```python
+df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
+```
+### Recommended way to update key in a list of dictionaries
+```python
+def func(row):
+    for i in range(len(row['col'])):
+        row['col'][i].get('key')='NEW VALUE'
+     ...
+     return row['col']
+>>> df['col'].apply(func,axis='columns')
+```
+
+### `apply` in full DataFrame
 #### Apply a function to a Dataframe elementwise.
 ```python
 df.applymap(func)
@@ -119,14 +174,6 @@ print(l.merge(r,on='T',how='inner').fillna(0))
 pd=pd.DataFrame()
 pd.loc[10,'hello']='world'
 ```
-#### Apply method with condition
-```python
-df=pd.DataFrame({'A':['a',2]}).applymap(lambda x:x-1 if isinstance(x,int) else x)
-print(df)
-   A
-0  a
-1  1
-```
 
 #### Calculates the maximum between columns
 See [stackoverflow](https://stackoverflow.com/a/20033232)
@@ -164,44 +211,6 @@ Instituto de Física                                             862
 Instituto de Biología                                           656
 Instituto de Química                                            645
 Departamento de Matemáticas                                     130
-```
-
-## `apply` in row
-#### Use `apply` in multiple columns of a DataFrame with `axis=1`
-Based on https://stackoverflow.com/a/16354730
-General help:
-```python
-df.apply(lambda row: row['a'] % row['c'],axis=1)
-```
-Details...
-```python
-def my_test2(row):
-    return row['a'] % row['c']
-df = DataFrame ({'a' : np.random.randn(6),
-                 'b' : ['foo', 'bar'] * 3,
-                 'c' : np.random.randn(6)})
-
-df['Value'] = df.apply(lambda row: my_test(row['a'], row['c']), axis=1)
-df
-Out[..]:
-                    a    b         c     Value
-          0 -1.674308  foo  0.343801  0.044698
-                       ...
-```
-To apply in all entries use `df.applymap`
-
-It can be used to merge two columns
-```python
-df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
-```
-### Recommended way to update key in a list of dictionaries
-```python
-def func(row):
-    for i in range(len(row['col'])):
-        row['col'][i].get('key')='NEW VALUE'
-     ...
-     return row['col']
->>> df['col'].apply(func,axis='columns')
 ```
 
 #### Logical filters in DataFrame`
