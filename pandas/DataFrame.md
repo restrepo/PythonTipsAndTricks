@@ -292,3 +292,9 @@ or
 with open(r"file.json", "r") as read_file:
     data = json.load(read_file)
 ```
+For a compressed json with UTF-8 encoding (see: https://stackoverflow.com/a/39451012/2268280):
+```
+import gzip
+with gzip.GzipFile('file.json.gz', 'r') as read_file:
+    data = json.loads(read_file.read().decode('utf-8'))
+```
