@@ -279,8 +279,9 @@ a=pd.read_json(url, orient='index').T
 ```
 ### Write data
 #### Write to json by using the standard format that can be read also with `json.loads`
+Also to enforce UTF-8 encoding and properly characters like 'π' whithout escaping
 ```python
-df.to_json('file.json',orient='records')
+df.to_json('file.json',orient='records',force_ascii=False)
 ```
 This can be read either as
 ```python
@@ -290,10 +291,4 @@ or
 ```python
 with open(r"file.json", "r") as read_file:
     data = json.load(read_file)
-```
-To enforce UTF-8 encoding and properly characters like 'π' whithout escaping them, see
-https://stackoverflow.com/a/39612316/2268280
-```python
-with open('df.json', 'w', encoding='utf-8') as file:
-    df.to_json(file,orient='records',force_ascii=False)
 ```
