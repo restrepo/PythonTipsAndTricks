@@ -291,3 +291,9 @@ or
 with open(r"file.json", "r") as read_file:
     data = json.load(read_file)
 ```
+To enforce UTF-8 encoding and properly characters like 'π' whithout escaping them, see
+https://stackoverflow.com/a/39612316/2268280
+```python
+with open('df.json', 'w', encoding='utf-8') as file:
+    df.to_json(file,orient='records',force_ascii=False)
+```
