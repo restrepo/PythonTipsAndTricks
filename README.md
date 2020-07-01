@@ -9,8 +9,8 @@
     - [TypsAndTtrics](./python/TipsandTricks.md)
     - [Class](./python/Class.md)
 * Jupyter
-    - [Jupyter](./python/Jupyter.md)
-    - [Jupyter Book](./python/jupyter-book.md)
+    - [Jupyter](./Jupyter/Jupyter.md)
+    - [Jupyter Book](./Jupyter/jupyter-book.md)
 * Mathplotlib
     - [Mathplotlib](./mathplotlib/mathplotlib.md)
 * Anaconda
