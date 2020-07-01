@@ -14,7 +14,7 @@
 * Mathplotlib
     - [Mathplotlib](./mathplotlib/mathplotlib.md)
 * Anaconda
-    - [Anaconda](./anaconda/Anaconda.md)
+    - [Anaconda](./python/Anaconda.md)
 * Somes gists
     - [Gists](./gists/gists.md)
 
