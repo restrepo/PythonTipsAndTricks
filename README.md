@@ -16,7 +16,7 @@
 * Anaconda
     - [Anaconda](./anaconda/Anaconda.md)
 * Somes gists
-    _ [Gits](./gists/gists.md)
+    - [Gits](./gists/gists.md)
 
 
 ## Web version
