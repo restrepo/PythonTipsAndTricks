@@ -283,18 +283,26 @@ Also to enforce UTF-8 encoding and properly characters like 'π' whithout escapi
 ```python
 df.to_json('file.json',orient='records',force_ascii=False)
 ```
+#### Read the JSON ata
 This can be read either as
 ```python
 pd.read_json('file.json')
 ```
-or
+or Directly a full json list of dictionaries
+* Full file
 ```python
 with open(r"file.json", "r") as read_file:
     data = json.load(read_file)
 ```
-For a compressed json with UTF-8 encoding (see: https://stackoverflow.com/a/39451012/2268280):
-```
+* For a compressed json with UTF-8 encoding (see: https://stackoverflow.com/a/39451012/2268280):
+```python
 import gzip
 with gzip.GzipFile('file.json.gz', 'r') as read_file:
     data = json.loads(read_file.read().decode('utf-8'))
+```
+* Line by line to avoid encoding problems (see: https://stackoverflow.com/a/29312618/2268280)
+```python
+data = []
+for line in open('file.json', 'r'):
+    data.append(json.loads(line))
 ```
