@@ -6,3 +6,10 @@ Libraries can use the decorators `pandas.api.extensions.register_dataframe_acces
 See: https://pandas.pydata.org/pandas-docs/stable/development/extending.html for details
 
 See also [swifter](https://medium.com/@jmcarpenter2/swiftapply-automatically-efficient-pandas-apply-operations-50e1058909f9)
+
+## Other
+##### Configuration
+```python
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.max_colwidth',200)
