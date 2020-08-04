@@ -8,6 +8,7 @@
 * Python
     - [TypsAndTtrics](./python/TipsandTricks.md)
     - [Class](./python/Class.md)
+    - [Countries](./python/countries.md)    
 * Jupyter
     - [Jupyter](./Jupyter/Jupyter.md)
     - [Jupyter Book](./Jupyter/jupyter-book.md)
