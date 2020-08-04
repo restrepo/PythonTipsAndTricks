@@ -12,5 +12,6 @@ Out[]: ['Vietnam']
 Add country alias to existing two-letter code (or extra country with new two-letter code)
 ```python
 GeoText.index[2]['viet nam']='VI'
+GeoText('May be this way: Viet Nam, or this other way: Vietnam'  ).countries
 Out[]: ['Viet Nam', 'Vietnam']
 ```
