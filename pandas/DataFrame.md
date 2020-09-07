@@ -231,7 +231,7 @@ df.to_dict('records')
 
 
 
-### Read data
+## Read data
 
 ### CSV
 
@@ -277,13 +277,13 @@ Udea `orient='index'`. See for example [here](https://www.kaggle.com/diegorestre
 ```python
 a=pd.read_json(url, orient='index').T
 ```
-### Write data
+## Write data
 #### Write to json by using the standard format that can be read also with `json.loads`
 Also to enforce UTF-8 encoding and properly characters like 'π' whithout escaping
 ```python
 df.to_json('file.json',orient='records',force_ascii=False)
 ```
-#### Read the JSON ata
+#### Read the JSON data
 This can be read either as
 ```python
 pd.read_json('file.json')
@@ -305,4 +305,9 @@ with gzip.GzipFile('file.json.gz', 'r') as read_file:
 data = []
 for line in open('file.json', 'r'):
     data.append(json.loads(line))
+```
+## Tips and tricks
+* Mask based in contained string with `NaN` in columns
+```python
+df[df.str.contains('query',na=False)]
 ```
