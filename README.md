@@ -6,7 +6,7 @@
     - [Numpy](./numpy/numpy.md)
     - [Scipy](./scipy/scipy.md)
 * Python
-    - [TypsAndTtrics](./python/TipsandTricks.md)
+    - [TipsAndTtrics](./python/TipsandTricks.md)
     - [Class](./python/Class.md)
     - [Countries](./python/countries.md)    
 * Jupyter
