@@ -256,7 +256,7 @@ def read_csv_objects(file,columns,**kwargs):
 ```    
 
 #### Read a long csv file
-Use `low_memory=Fals`. For example [here](https://www.kaggle.com/diegorestrepo/kernel1f8af0b449)
+Use `low_memory=False`. For example [here](https://www.kaggle.com/diegorestrepo/kernel1f8af0b449)
 ```python
 cv=pd.read_csv('/kaggle/input/CORD-19-research-challenge/metadata.csv',low_memory=False)
 ```
