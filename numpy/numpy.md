@@ -61,10 +61,11 @@ def Si(x):
 array([ 0.94608307,  1.60541298])
 ```
 
-### Make the sorted permutations of `n` elements in a list of `m>=n` entries
+### Make the sorted permutations of `n` elements in a list, `l`, of `m>=n` entries
 ```python
+import itertools
 prmts=[]
-for p in itertools. permutations(uf, 3):
+for p in itertools. permutations(l, n):
     if sorted(p) not in prmts:
         prmts.append(sorted(p))
 ```        
