@@ -61,5 +61,14 @@ def Si(x):
 array([ 0.94608307,  1.60541298])
 ```
 
+### Make the sorted permutations of `n` elements in a list of `m>=n` entries
+``python
+prmts=[]
+for p in itertools. permutations(uf, 3):
+    if sorted(p) not in prmts:
+        prmts.append(sorted(p))
+``        
+
+
 ### Append list of Python dictionaries to a file without loading it
 See [This notebook](./Append_Dictionary_to_File.ipynb)
