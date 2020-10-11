@@ -25,3 +25,8 @@ from textblob import TextBlob
 TextBlob('On a minimal factorization conjecture').detect_language()
 [Out]: en
 ```
+## Dictionaries
+### dict comprehension
+```python
+dict( (k,list(v)) for k,v in r.items() )
+```
