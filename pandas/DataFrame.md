@@ -306,6 +306,22 @@ data = []
 for line in open('file.json', 'r'):
     data.append(json.loads(line))
 ```
+#### Fix integer key in column of dictionaries when load from JSON
+Wrongly load as
+```python
+>>> df.loc[0,'d']
+{'1':'A'}
+```
+See https://stackoverflow.com/a/34346202/2268280
+```python
+def jsonKeys2int(x):
+    if isinstance(x, dict):
+            return {int(k):v for k,v in x.items()}
+    return x
+>>> df['d']=df['d'].apply(jsonKeys2int)
+>>> df.loc[0,'d']
+{1:'A'}
+```
 ## Tips and tricks
 * Mask based in contained string with `NaN` in columns
 ```python
