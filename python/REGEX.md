@@ -21,7 +21,7 @@ McWewen
 Also works for end or whitespace:
 
 `\b` is word boundary, which can be a white space, the beginning of a line or a non-alphanumeric symbol
-## Apply a function the selected group
+## Apply a method to the selected group
 Example: Title string only in long words
 ```python
 >>> s='Facultad de ciencias exactas y naturales'
