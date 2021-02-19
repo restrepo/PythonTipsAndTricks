@@ -21,3 +21,10 @@ McWewen
 Also works for end or whitespace:
 
 `\b` is word boundary, which can be a white space, the beginning of a line or a non-alphanumeric symbol
+## Apply a function the selected group
+Example: Title string only in long words
+```
+>>> s='Facultad de ciencias exactas y naturales'
+>>> re.sub('(\s[A-Za-z]{1,3}\s)',lambda m: m.group(0).lower(),s.title(),re.UNICODE)
+'Facultad de Ciencias Exactas y Naturales'
+```
