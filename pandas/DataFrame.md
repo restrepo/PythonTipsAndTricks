@@ -226,6 +226,7 @@ df.to_dict('records')
 ### Insert list into a cell
 See https://stackoverflow.com/a/47548471/2268280
 ```python
+df['B'] = df['B'].astype('object')
 df.at[1, 'B'] = [1, 2, 3]
 ```
 
