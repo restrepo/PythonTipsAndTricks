@@ -3,7 +3,7 @@
 ## Data-Frames (`df`)
 
 ### Miscellaneous
-##### Configuration
+#### Configuration
 ```python
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
@@ -16,8 +16,8 @@ pd.set_option('display.max_colwidth',200)
 ```
 
 
-## `apply`
-### `apply` in column
+### `apply`
+#### `apply` in column
 #### `apply` method with condition
 ```python
 df=pd.DataFrame({'A':['a',2]}).applymap(lambda x:x-1 if isinstance(x,int) else x)
@@ -31,7 +31,7 @@ print(df)
 df[ df['column'].apply(lambda l: [d.get('key')==value for d in l] 
        if l else [False]).apply(lambda l: True in l) ]
 ```
-### `apply` in row
+#### `apply` in row
 #### Use `apply` in multiple columns of a DataFrame with `axis=1`
 Based on https://stackoverflow.com/a/16354730
 General help:
@@ -59,7 +59,7 @@ It can be used to merge two columns
 ```python
 df.apply(lambda row: row['A'] if row['A'] else row['B'],axis=1 )
 ```
-### Recommended way to update key in a list of dictionaries
+#### Recommended way to update key in a list of dictionaries
 ```python
 def func(row):
     for i in range(len(row['col'])):
@@ -69,12 +69,13 @@ def func(row):
 >>> df['col'].apply(func,axis='columns')
 ```
 
-### `apply` in full DataFrame
-#### Apply a function to a Dataframe elementwise.
+#### `apply` in full DataFrame
+* Apply a function to a Dataframe elementwise.
 ```python
 df.applymap(func)
 ```
 
+### Tips
 ##### Drop duplicates:
 ```python
     df.drop_duplicates(subset=['column_name']).reset_index(drop=True)
@@ -187,11 +188,6 @@ import csv
 df.to_csv('file.csv',sep=' ',
            quoting=csv.QUOTE_NONNUMERIC,header=False,index=False)
 ```
-#### Write/read full objects 
-Used `hdf` which allow to save several dataframes to the same file:
-```python
-df.to_hdf('file.hdf5','FreeKey')
-```
 
 #### Combine two coluns of text in dataframe
 See also [here](https://stackoverflow.com/a/19378497/2268280)
@@ -229,6 +225,20 @@ df=df.where((pd.notnull(df)), None)
 df.to_dict('records')
 ```
 
+#### Insert list into a cell
+See https://stackoverflow.com/a/47548471/2268280
+```python
+df.to_dict('records')
+```
+df.at[1, 'B'] = [1, 2, 3]
+```
+
+### Input/Output
+#### Write/read full objects 
+Used `hdf` which allow to save several dataframes to the same file:
+```python
+df.to_hdf('file.hdf5','FreeKey')
+```
 
 
 ## Read data
