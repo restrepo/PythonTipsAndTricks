@@ -32,6 +32,7 @@ Example: Title string only in long words
 ```
 
 Example: Fix BibTex:
+See https://stackoverflow.com/a/17136150/2268280
 ```python
 from unidecode import unidecode
 re.sub(r'\\(.)',
