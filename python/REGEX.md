@@ -22,9 +22,20 @@ Also works for end or whitespace:
 
 `\b` is word boundary, which can be a white space, the beginning of a line or a non-alphanumeric symbol
 ## Apply a method to the selected group
+or Calling a function on captured group in re.sub()
+
 Example: Title string only in long words
 ```python
 >>> s='Facultad de ciencias exactas y naturales'
 >>> re.sub('(\s[A-Za-z]{1,3}\s)',lambda m: m.group(0).lower(),s.title(),re.UNICODE)
 'Facultad de Ciencias Exactas y Naturales'
 ```
+
+Example: Fix BibTex:
+```python
+from unidecode import unidecode
+re.sub(r'\\(.)',
+       lambda m: 'í'+unidecode(m.group(1)),
+       'Ram\\ŕez-V\\ĺlareal, Álvaro and Restrepo, Diego')
+```
+→ `Ramírez-Víllareal, Álvaro and Restrepo, Diego`
