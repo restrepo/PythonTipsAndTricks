@@ -82,9 +82,13 @@ df.applymap(func)
 ```python
 pd.options.mode.chained_assignment = None  # default='warn'
 ```
+### drop colums with `NaN` entries
+```python
+df.drop(['col_1','col_2'],axis='columns')
+```
 ### drop colums
 ```python
-udea.drop(['dict_doi','match'],axis='columns')
+df.dropna(axis=1)
 ```
 ### Drop DF entries from a list of indices:
 `mi` is the list of indices
