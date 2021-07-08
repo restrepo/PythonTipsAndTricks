@@ -191,7 +191,7 @@ df.to_csv('file.csv',sep=' ',
            quoting=csv.QUOTE_NONNUMERIC,header=False,index=False)
 ```
 
-### Combine two coluns of text in dataframe
+### Combine two columns of text in dataframe
 See also [here](https://stackoverflow.com/a/19378497/2268280)
 ```python
 df['FULL NAME']=df['NAME']+' '+df['SURNAME']
