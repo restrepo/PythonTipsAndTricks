@@ -6,8 +6,11 @@
 * Assign a name to the repository, let say: `jupyterlite`  and creates the repository
 * Check the "Action" tab of the repository until the "Build and Deploy" action completes
 * Check that a new branch "gh-pages" have been created
+
+![branch](https://github.com/restrepo/PythonTipsAndTricks/blob/master/img/branch.png)
+
 * Go to "Settings" → "Pages" and change the "Source" to "Branch: gh-pages" and "Save"
 
  Your site would be ready to be published at the indicated link, for example:
  
- ![template](https://github.com/restrepo/PythonTipsAndTricks/blob/master/img/link.png)
+ ![link](https://github.com/restrepo/PythonTipsAndTricks/blob/master/img/link.png)
