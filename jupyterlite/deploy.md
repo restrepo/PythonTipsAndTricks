@@ -13,4 +13,4 @@
 
  Your site would be ready to be published at the indicated link, for example:
  
- ![link](https://github.com/restrepo/PythonTipsAndTricks/blob/master/img/link.png)
+[ ![link](https://github.com/restrepo/PythonTipsAndTricks/blob/master/img/link.png)](https://restrepo.github.io/jupyterlite/)
