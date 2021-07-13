@@ -18,6 +18,8 @@
     - [Anaconda](./python/Anaconda.md)
 * Somes gists
     - [Gists](./gists/gists.md)
+* JupyterLite
+    - [Deploy in GitHub](./jupyterlite/deploy.md)
 
 
 ## Web version
