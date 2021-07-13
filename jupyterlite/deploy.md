@@ -8,4 +8,4 @@
 * Check that a new branch "gh-pages" have been created
 * Go to "Settings" → "Pages" and change the "Source" to "Branch: gh-pages" and "Save"
 
- Your site would be ready to be published at, for example, https://restrepo.github.io/jupyterlite/
+ Your site would be ready to be published at the indicated link, for example, https://restrepo.github.io/jupyterlite/
