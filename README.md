@@ -13,7 +13,7 @@
     - [Jupyter](./Jupyter/Jupyter.md)
     - [Jupyter Book](./Jupyter/jupyter-book.md)
 * Mathplotlib
-    - [Mathplotlib](./mathplotlib/mathplotlib.md)
+    - [Mathplotlib](./mathplotlib/matplotlib.md)
 * Anaconda
     - [Anaconda](./python/Anaconda.md)
 * Somes gists
