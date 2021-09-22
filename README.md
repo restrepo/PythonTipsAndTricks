@@ -12,8 +12,8 @@
 * Jupyter
     - [Jupyter](./Jupyter/Jupyter.md)
     - [Jupyter Book](./Jupyter/jupyter-book.md)
-* Mathplotlib
-    - [Mathplotlib](./mathplotlib/matplotlib.md)
+* Matplotlib
+    - [Matplotlib](./mathplotlib/matplotlib.md)
 * Anaconda
     - [Anaconda](./python/Anaconda.md)
 * Somes gists
