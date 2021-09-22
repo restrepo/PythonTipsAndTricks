@@ -1,4 +1,4 @@
-# Mathplotlib
+# Matplotlib
 We assume that you already load a DataFrame, `df`, with columns: `x,y,z,..`
 ## Jupyter
 Global configurations insides or outside the notebook
