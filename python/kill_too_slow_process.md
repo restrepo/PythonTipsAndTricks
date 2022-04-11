@@ -33,7 +33,6 @@ def run(t,d):
 #Shared variable: In this case a `dict`
 d=multiprocessing.Manager().dict()
 
-#define Process
 t_kill=3
 for t in [1,6,2]:
     if t<t_kill:
@@ -42,10 +41,11 @@ for t in [1,6,2]:
     if t>=t_kill:
         print('The Procces with `foo` fails to set `x`')
 
+    #define Process
     p = multiprocessing.Process(target=run, name="Run", args=(t,d))
     #launch the p
     p.start()
-    # Wait a maximum of 2 seconds for foo
+    # Wait a maximum of `t_kill` seconds for foo
     # Usage: join([timeout in seconds])
     p.join(t_kill)
 
@@ -60,6 +60,7 @@ for t in [1,6,2]:
 
     #cleanup
     p.join()
+    #result
     print(f"Output for t={t} is: {d['return']}")
     print("="*20)
 ```
