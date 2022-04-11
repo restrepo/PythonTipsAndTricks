@@ -37,8 +37,8 @@ d=multiprocessing.Manager().dict()
 
 t_kill=3
 for t in [1,6,2]:
+    print("="*20)
     if t<t_kill:
-        print("="*20)
         print('The Proccess with `foo` runs normally')
     if t>=t_kill:
         print('The Procces with `foo` fails to set `x`')
@@ -64,21 +64,17 @@ for t in [1,6,2]:
     p.join()
     #result
     print(f"Output for t={t} is: {d['return']}")
-    print("="*20)
 ```
 Output:
 ```bash
-
-====================
+****************************************
 The Proccess with `foo` runs normally
 Output for t=1 is: 666
-====================
+****************************************
 The Procces with `foo` fails to set `x`
 foo is running... let's kill it...
 Output for t=6 is: None
-====================
-====================
+****************************************
 The Proccess with `foo` runs normally
 Output for t=2 is: 666
-====================
 ```
