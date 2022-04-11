@@ -28,6 +28,8 @@ def run(t,d):
     to capture: 
      `foo` → `return`
     '''
+    if not isinstance(d,multiprocessing.managers.DictProxy):
+        raise Exception('ERROR: Wrong dict')    
     d['return']=None
     x=foo(t)
     d['return']=x
