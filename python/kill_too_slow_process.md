@@ -37,7 +37,7 @@ d=multiprocessing.Manager().dict()
 
 t_kill=3
 for t in [1,6,2]:
-    print("="*20)
+    print("*"*40)
     if t<t_kill:
         print('The Proccess with `foo` runs normally')
     if t>=t_kill:
