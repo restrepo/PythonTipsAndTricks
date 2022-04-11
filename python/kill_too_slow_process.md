@@ -1,6 +1,8 @@
 # Kill function call after some time
 Let `foo` a function such that for some argument, it takes to much time to execute the call. 
+
 How terminate that call?
+
 Use: [`multiprocessing`](https://stackoverflow.com/a/14920854) with [shared variable](https://stackoverflow.com/a/10415215) to communicate.
 
 ```python
