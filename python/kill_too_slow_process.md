@@ -30,6 +30,7 @@ def run(t,d):
     x=foo(t)
     d['return']=x
 
+#Shared variable: In this case a `dict`
 d=multiprocessing.Manager().dict()
 
 #define Process
