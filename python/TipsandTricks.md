@@ -36,5 +36,5 @@ dict( (k,list(v)) for k,v in r.items() )
 For builtin `max` for example
 ```python
 import builtins
-builtins.max
+max=builtins.max
 ```
