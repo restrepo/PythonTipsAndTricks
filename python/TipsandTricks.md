@@ -30,3 +30,11 @@ TextBlob('On a minimal factorization conjecture').detect_language()
 ```python
 dict( (k,list(v)) for k,v in r.items() )
 ```
+
+## Miscellaneous
+### [How to restore a builtin that I overwrote by accident?](https://stackoverflow.com/a/17152796)
+For builtin `max` for example
+```python
+import builtins
+builtins.max
+```
