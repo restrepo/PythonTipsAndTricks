@@ -71,8 +71,8 @@ plt.show()
 ```
 ## `hexbin` plots
 ```python
-x=np.random.random(100)
-y=np.random.random(100)
+x=np.random.random(10000)
+y=np.random.random(10000)
 plt.hexbin(x,y,x**2+y**2)
 plt.colorbar()
 ```
