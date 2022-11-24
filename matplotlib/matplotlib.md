@@ -76,4 +76,4 @@ y=np.random.random(100)
 plt.hexbin(x,y,x**2+y**2)
 plt.colorbar()
 ```
-![image]([img/test.png](https://raw.githubusercontent.com/restrepo/PythonTipsAndTricks/master/img/test.png)
+![image](https://raw.githubusercontent.com/restrepo/PythonTipsAndTricks/master/img/test.png)
