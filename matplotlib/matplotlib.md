@@ -33,6 +33,16 @@ leg.set_title(r'${\cal L}\ [{\rm fb}^{-1}]$',prop={'size':20})
 ## Legend Placed Outside of Plot
 https://riptutorial.com/matplotlib/example/9964/legend-placed-outside-of-plot
 ![image](https://user-images.githubusercontent.com/655883/134273403-2de4b35c-7621-4c3c-9263-b2ba777cb13b.png)
+
+## `hexbin` plots
+```python
+x=np.random.random(100)
+y=np.random.random(100)
+plt.hexbin(x,y,x**2+y**2)
+plt.colorbar()
+```
+![image](img/test.png)
+
 ```python
 import matplotlib.pylab as plt
 fig, ax = plt.subplots(1, 1, figsize=(10,6)) # make the figure with the size 10 x 6 inches
