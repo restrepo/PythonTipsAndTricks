@@ -15,9 +15,17 @@ from pymongo import MongoClient
 client = MongoClient()
 client.list_database_names()
 ```
+Output
 ```
 [...
 br,
 ...]
 ```
+Select database
+```python
+db = client['br']
+db.list_collection_names()
+```
+Operations:
+* `client.drop_database('br')`
 
