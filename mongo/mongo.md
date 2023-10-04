@@ -40,4 +40,5 @@ cn.count_documents({})
 
 Operations:
 * `client.drop_database('br')`
+* `empty = list(client["br"]["cache_cites_count"].find({"empty":True}))`
 
