@@ -43,6 +43,8 @@ Operations:
   * `client.drop_database('br')`
   * `empty = list(client["br"]["cache_cites_count"].find({"empty":True}))`
 * Moai    
-  * `./moai_gscites_count_run --db_name la --jobs 72 --apikey XXX`
+  * `./moai_gscites_count_run --db_name br --create_cache && ./moai_gscites_count_run --db_name la --jobs 72 --apikey XXX`
+* ScraperAPI
+ * http://api.scraperapi.com/account?api_key=XXX  
     
  
