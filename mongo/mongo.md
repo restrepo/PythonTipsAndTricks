@@ -9,3 +9,9 @@ mongorestore ./dump/
 ```bash
 mongoimport --db la --collection data --file /scratch/restrepo/argentina.json --jsonArray
 ```
+## PyMongo
+```python
+from pymongo import MongoClient
+client = MongoClient()
+client.list_database_names()
+```
