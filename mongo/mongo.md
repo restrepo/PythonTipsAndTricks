@@ -41,6 +41,10 @@ Select collection
 cn=db.get_collection('stage')
 cn.count_documents({})
 ```
+Check de collection with Pandas
+```python
+ar=pd.DataFrame(list(cn.find()))
+```
 
 Operations:
 * PyMongo
