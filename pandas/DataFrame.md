@@ -348,3 +348,13 @@ data = []
 for line in open('file.json', 'r'):
     data.append(json.loads(line))
 ```
+### Write Excel file with many urls
+https://stackoverflow.com/a/69226551/2268280
+```python
+writer = pd.ExcelWriter('file.xlsx',
+                        engine='xlsxwriter',
+                        engine_kwargs={'options': {'strings_to_urls': False}})
+
+up.to_excel(writer)
+writer.close()
+```
