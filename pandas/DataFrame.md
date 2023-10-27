@@ -355,6 +355,6 @@ writer = pd.ExcelWriter('file.xlsx',
                         engine='xlsxwriter',
                         engine_kwargs={'options': {'strings_to_urls': False}})
 
-df.to_excel(writer)
+df.to_excel(writer,index=False)
 writer.close()
 ```
