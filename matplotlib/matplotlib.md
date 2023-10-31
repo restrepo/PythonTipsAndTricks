@@ -77,3 +77,11 @@ plt.hexbin(x,y,x**2+y**2)
 plt.colorbar()
 ```
 ![image](https://raw.githubusercontent.com/restrepo/PythonTipsAndTricks/master/img/test.png)
+
+```python
+x=10**np.random.uniform(np.log10(1),np.log(100),10000)
+y=10**np.random.uniform(np.log10(1),np.log(100),10000)
+plt.hexbin(x,y,x**2+y**2,xscale='log',yscale='log',bins='log')
+plt.colorbar()
+```
+![image](https://raw.githubusercontent.com/restrepo/PythonTipsAndTricks/master/img/testlog.png)
