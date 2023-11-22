@@ -1,5 +1,6 @@
 # Mongo
 ## Dump
+Note that `mongorestore` only works for the path `dump/db_name/files` 
 ```bash
 mongodump -d la
 #To restore in a new mongo without the la database:
