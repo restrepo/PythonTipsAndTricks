@@ -38,4 +38,18 @@ display(radiobutton,output_radiobutton)
 ```
 ![image](https://github.com/restrepo/PythonTipsAndTricks/assets/655883/eeab0416-46c0-4ca4-be01-75b23854ed9e)
 Once selected, store with
-`LOAD_BODY = radiobutton.get_interact_value()`
+`LOAD_BODY = radiobutton.get_interact_value()
+
+## MyST
+`pip install jupyterlab_myst`
+
+Example
+
+```{figure} https://source.unsplash.com/random/500x200/?mountain
+:label: my-fig
+:align: center
+
+My **bold** mountain 🏔🚠.
+```
+
+Check out [](#my-fig)!!
