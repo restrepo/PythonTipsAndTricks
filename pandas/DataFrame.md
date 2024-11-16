@@ -86,7 +86,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 ```python
 df.drop(['col_1','col_2'],axis='columns')
 ```
-### drop colums
+### drop colums with `NaN` entries
 ```python
 df.dropna(axis=1)
 ```
@@ -217,6 +217,15 @@ Departamento de Matemáticas                                     130
 df[ ( df['col1']>0 ) & df['col2']<10 ) ]
 # For OR use `|`
 ```
+### Logical filters in specific cell of a DataFrame`
+```python
+df.loc[ ( df['col1']>0 ) & df['col2']<10 ) ,'column_name']
+```
+and change the values of all of them
+```python
+df.loc[ ( df['col1']>0 ) & df['col2']<10 ) ,'column_name'] = new_value
+```
+
 ### Replacing NaN with None in Pandas DataFrame or Series
 See: https://stackoverflow.com/a/14163209/2268280
 ```python
