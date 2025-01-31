@@ -247,7 +247,7 @@ df.at[1, 'B'] = [1, 2, 3]
 ```python
 df[df.str.contains('query',na=False)]
 ```
-### Searck string in full DataFrame
+### Search string in full DataFrame
 See: https://stackoverflow.com/a/47010105/2268280 
 ```python
 mask = np.column_stack([df[col].astype(str).str.contains('El TLC con la Unión Europea', na=False) for col in df])
